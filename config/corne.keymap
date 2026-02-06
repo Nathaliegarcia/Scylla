@@ -14,52 +14,52 @@
 
         Escape {
             bindings = <&kp ESC>;
-            key-positions = <0 11>;
+            key-positions = <12 23>;
         };
 
         OpenParenthesis {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <6 7>;
+            key-positions = <18 19>;
         };
 
         OpenBrace {
             bindings = <&kp LEFT_BRACE>;
-            key-positions = <18 19>;
+            key-positions = <30 31>;
         };
 
         OpenBracket {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <30 31>;
+            key-positions = <42 43>;
         };
 
         CloseParenthasis {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <8 7>;
+            key-positions = <20 19>;
         };
 
         CloseBrace {
             bindings = <&kp RIGHT_BRACE>;
-            key-positions = <19 20>;
+            key-positions = <31 32>;
         };
 
         CloseBracket {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <31 32>;
+            key-positions = <43 44>;
         };
 
         LessThan {
             bindings = <&kp LESS_THAN>;
-            key-positions = <3 4>;
+            key-positions = <15 16>;
         };
 
         GreatherThan {
             bindings = <&kp GREATER_THAN>;
-            key-positions = <4 5>;
+            key-positions = <16 17>;
         };
 
         Enter {
             bindings = <&kp ENTER>;
-            key-positions = <38 39>;
+            key-positions = <52 53>;
         };
     };
 
@@ -79,47 +79,53 @@
 
         default_layer {
             // -----------------------------------------------------------------------------------------
+            // |  `   |  1  |  2  |  3  |  4  |  5  |   |  6  |  7   |  8  |  9  |  0  |  =   |
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  | P/\ | BSPC |
             // | SHFT | CTL | ALT | GUI | SFT |  G  |   |  H  | SFT  | GUI | ALT | CTL | ENTR |
             //homerow |  A  |  S  |  D  |  F  |     |   |     |  J   |  K  |  L  |  ;  |
             // | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /' | ESC  |
-            //                    | GUI | ALT | SPC |   | SPC | L2   | L1  |
+            //              |     |     | GUI | ALT | SPC |   | SPC | L2   | L1  |     |     |
 
             bindings = <
+&kp GRAVE       &kp N1       &kp N2      &kp N3      &kp N4        &kp N5     &kp N6     &kp N7       &kp N8     &kp N9      &kp N0          &kp EQUAL
 &kp TAB         &kp Q        &kp W       &kp E       &kp R         &kp T      &kp Y      &kp U        &kp I      &kp O       &mt BSLH P      &kp BSPC
 &kp LEFT_SHIFT  &hm LCTRL A  &hm LALT S  &hm LGUI D  &hm LSHIFT F  &kp G      &kp H      &hm RSHIFT J &hm RGUI K &hm RALT L  &hm RCTRL SEMI  &kp ENTER
 &kp LCTRL       &kp Z        &kp X       &kp C       &kp V         &kp B      &kp N      &kp M        &kp COMMA  &kp DOT     &mt SQT FSLH    &kp ESC
-                                         &kp LGUI    &kp LEFT_ALT  &kp SPACE  &kp SPACE  &mo 2        &mo 1
+                &trans        &trans      &kp LGUI    &kp LEFT_ALT  &kp SPACE  &kp SPACE  &mo 2        &mo 1      &trans      &trans
             >;
         };
 
         lower_layer {
             // -----------------------------------------------------------------------------------------
+            // | F1   | F2  | F3  | F4  | F5  | F6  |   | F7  |  F8 |  F9 | F10 | F11 | F12 |
             // | SYSR |BT_CLR|BT_NXT|BT_PRV|     |     |   |  `  |  7  |  8  |  9  |  0  | DEL |
             // | SHFT |      |      | UP   |     |     |   | PGUP|  4  |  5  |  6  |  -  |  =  |
             // | CTRL |      |  LFT | DWN  | RGT |PSCRN|   | PGDN|  1  |  2  |  3  | HOME| END |
-            //                      | GUI | ALT | SPC |   | SPC |MENU |     |
+            //              |     |     | GUI | ALT | SPC |   | SPC |MENU |     |     | BOOT|
 
             bindings = <
+&kp F1         &kp F2     &kp F3     &kp F4        &kp F5     &kp F6       &kp F7     &kp F8  &kp F9  &kp F10    &kp F11    &kp F12
 &sys_reset     &bt BT_CLR &bt BT_NXT &bt BT_PRV    &trans     &trans       &kp GRAVE  &kp N7  &kp N8  &kp N9     &kp N0     &kp DEL
 &kp LEFT_SHIFT &trans     &trans     &kp UP        &trans     &trans       &kp PG_UP  &kp N4  &kp N5  &kp N6     &kp MINUS  &kp EQUAL
 &kp LCTRL      &trans     &kp LEFT   &kp DOWN      &kp RIGHT  &kp PSCRN    &kp PG_DN  &kp N1  &kp N2  &kp N3     &kp HOME   &kp END
-                          &kp LGUI        &kp LEFT_ALT     &kp SPACE    &kp SPACE  &kp K_APP  &trans
+               &trans     &trans     &kp LGUI      &kp LEFT_ALT &kp SPACE  &kp SPACE  &kp K_APP &trans &trans     &bootloader
             >;
         };
 
         raise_layer {
             // -----------------------------------------------------------------------------------------
+            // |      |     |     |     |     |     |   |     |     |     |     |     |      |
             // |  TAB |  !  |  @  |  #  |  &  |  %  |   |  ^  | F7  | F8  | F9  | F10 | BSPC |
             // | SHFT |MUTE |V_DN |V_UP |  <  |  >  |   |  -  | F4  | F5  | F6  | F11 |  `   |
             // | CTRL |     |     |     |     |     |   |  _  | F1  | F2  | F3  | F12 |  ~   |
-            //                    | GUI | ALT | SPC |   | SPC |     | ALT |
+            //              |     |     | GUI | ALT | SPC |   | SPC |     | ALT |     |     |
 
             bindings = <
+&trans          &trans       &trans             &trans           &trans         &trans              &trans     &trans    &trans    &trans    &trans    &trans
 &kp TAB         &kp EXCL     &kp AT             &kp HASH         &kp AMPERSAND  &kp PRCNT           &kp CARET  &kp F7    &kp F8    &kp F9    &kp F10   &kp BSPC
 &kp LEFT_SHIFT  &kp C_MUTE   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LESS_THAN  &kp GREATER_THAN    &kp MINUS  &kp F4    &kp F5    &kp F6    &kp F11   &kp GRAVE
 &kp LCTRL       &trans       &trans             &trans           &trans         &trans              &kp UNDER  &kp F1    &kp F2    &kp F3    &kp F12   &kp TILDE
-                                                 &kp LGUI         &kp LEFT_ALT   &kp SPACE           &kp SPACE  &trans    &kp RALT
+                &trans       &trans             &kp LGUI         &kp LEFT_ALT   &kp SPACE           &kp SPACE  &trans    &kp RALT  &trans    &trans
             >;
         };
     };
@@ -131,4 +137,5 @@
     // |      |     |     |     |     |     |   |     |     |     |     |     |      |
     // |      |     |     |     |     |     |   |     |     |     |     |     |      |
     // |      |     |     |     |     |     |   |     |     |     |     |     |      |
-    //                    |     |     |     |   |     |     |     |
+    // |      |     |     |     |     |     |   |     |     |     |     |     |      |
+    //              |     |     |     |     |     |   |     |     |     |     |     |
