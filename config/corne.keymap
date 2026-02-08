@@ -79,19 +79,19 @@
 
         default_layer {
             // -----------------------------------------------------------------------------------------
-            // |  `   |  1  |  2  |  3  |  4  |  5  |   |  6  |  7   |  8  |  9  |  0  |  =   |
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  | P/\ | BSPC |
-            // | SHFT | CTL | ALT | GUI | SFT |  G  |   |  H  | SFT  | GUI | ALT | CTL | ENTR |
+            // |  `   |  1  |  2  |  3  |  4  |  5  |   |  6  |  7   |  8  |  9  |  0  | - _  |
+            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | | \  |
+            // | SHFT | CTL | ALT | GUI | SFT |  G  |   |  H  | SFT  | GUI | ALT | CTL | ' "  |
             //homerow |  A  |  S  |  D  |  F  |     |   |     |  J   |  K  |  L  |  ;  |
-            // | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /' | ESC  |
-            //              |     |     | GUI | ALT | SPC |   | SPC | L2   | L1  |     |     |
+            // | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+            //              | L2  | BKSP | GUI | ALT | ESC |   | SPC | ENT | PSCRN | DEL | L1 |
 
             bindings = <
-&kp GRAVE       &kp N1       &kp N2      &kp N3      &kp N4        &kp N5     &kp N6     &kp N7       &kp N8     &kp N9      &kp N0          &kp EQUAL
-&kp TAB         &kp Q        &kp W       &kp E       &kp R         &kp T      &kp Y      &kp U        &kp I      &kp O       &kp P           &kp BSPC
-&kp LEFT_SHIFT  &hm LCTRL A  &hm LALT S  &hm LGUI D  &hm LSHIFT F  &kp G      &kp H      &hm RSHIFT J &hm RGUI K &hm RALT L  &hm RCTRL SEMI  &kp ENTER
-&kp LCTRL       &kp Z        &kp X       &kp C       &kp V         &kp B      &kp N      &kp M        &kp COMMA  &kp DOT     &mt SQT FSLH    &kp ESC
-                &trans        &trans      &kp LGUI    &kp LEFT_ALT  &kp SPACE  &kp SPACE  &mo 2        &mo 1      &trans      &trans
+&kp GRAVE  &kp N1    &kp N2   &kp N3   &kp N4    &kp N5       &kp N6    &kp N7    &kp N8     &kp N9   &kp N0    &kp MINUS
+&kp TAB    &kp Q     &kp W    &kp E    &kp R     &kp T        &kp Y     &kp U     &kp I      &kp O    &kp P     &kp BSLH
+&kp LSHFT  &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &kp G        &kp H     &kp RSHFT &kp RGUI   &kp RALT &kp RCTRL &kp SQT
+&kp LCTRL  &kp Z     &kp X    &kp C    &kp V     &kp B        &kp N     &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                     &mo 2    &kp BSPC &kp LGUI  &kp LALT &kp ESC   &kp SPACE &kp RET &kp PSCRN &kp DEL &mo 1
             >;
         };
 
