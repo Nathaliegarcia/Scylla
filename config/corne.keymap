@@ -12,11 +12,6 @@
     combos {
         compatible = "zmk,combos";
 
-        Escape {
-            bindings = <&kp ESC>;
-            key-positions = <12 23>;
-        };
-
         OpenParenthesis {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <18 19>;
@@ -47,21 +42,6 @@
             key-positions = <43 44>;
         };
 
-        LessThan {
-            bindings = <&kp LESS_THAN>;
-            key-positions = <15 16>;
-        };
-
-        GreatherThan {
-            bindings = <&kp GREATER_THAN>;
-            key-positions = <16 17>;
-        };
-
-        Enter {
-            bindings = <&kp ENTER>;
-            key-positions = <52 53>;
-        };
-
         BootloaderLeft {
             bindings = <&bootloader>;
             key-positions = <49 50>;
@@ -79,7 +59,7 @@
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <350>;
+            tapping-term-ms = <330>;
             quick-tap-ms = <300>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -142,7 +122,7 @@
             //              |     |     | GUI | ALT | SPC |   | SPC |     | ALT |     |     |
 
             bindings = <
-&trans          &bt BT_SEL 0 &bt BT_SEL 1       &bt BT_SEL 2     &bt BT_SEL 3   &bt BT_SEL 4        &trans     &trans    &trans    &trans    &trans    &trans
+&trans          &bt BT_SEL 0 &bt BT_SEL 1       &bt BT_SEL 2     &bt BT_SEL 3   &bt BT_SEL 4        &bt BT_SEL 5 &bt BT_SEL 6 &bt BT_SEL 7  &bt BT_SEL 8  &bt BT_SEL 9 &trans
 &kp TAB         &kp EXCL     &kp AT             &kp HASH         &kp AMPERSAND  &kp PRCNT           &kp CARET  &kp F7    &kp F8    &kp F9    &kp F10   &kp BSPC
 &kp LEFT_SHIFT  &kp C_MUTE   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LESS_THAN  &kp GREATER_THAN    &kp MINUS  &kp F4    &kp F5    &kp F6    &kp F11   &kp GRAVE
 &kp LCTRL       &trans       &trans             &trans           &trans         &trans              &kp UNDER  &kp F1    &kp F2    &kp F3    &kp F12   &kp TILDE
